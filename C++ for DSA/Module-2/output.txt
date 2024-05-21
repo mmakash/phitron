@@ -1,0 +1,2 @@
+Array before modification: 10 20 30 40 50 
+Array after modification: 0 0 0 0 0 

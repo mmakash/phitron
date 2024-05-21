@@ -1,6 +1,7 @@
-#include<iostream>
-#include<algorithm>
-#include<utility>
+// #include<iostream>
+// #include<algorithm>
+// #include<utility>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
