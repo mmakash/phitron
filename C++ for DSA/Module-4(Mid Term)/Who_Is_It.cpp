@@ -4,20 +4,22 @@ using namespace std;
 class Student {
 public:
     int id;
-    string name;
+    char name[100]; 
     char section;
     int total_marks;
 
-    Student(int id, string name, char section, int total_marks) {
+
+    Student(int id, char* name, char section, int total_marks) {
         this->id = id;
-        this->name = name;
+        strcpy(this->name, name); 
         this->section = section;
         this->total_marks = total_marks;
     }
 
+    
     Student() {
         this->id = 0;
-        this->name = "";
+        this->name[0] = '\0'; 
         this->section = ' ';
         this->total_marks = 0;
     }
@@ -29,9 +31,16 @@ int main() {
     while (t--) {
         Student sakib, rakib, akib;
 
-        cin >> sakib.id >> sakib.name >> sakib.section >> sakib.total_marks;
-        cin >> rakib.id >> rakib.name >> rakib.section >> rakib.total_marks;
-        cin >> akib.id >> akib.name >> akib.section >> akib.total_marks;
+        char name[100];
+        
+        cin >> sakib.id >> name >> sakib.section >> sakib.total_marks;
+        strcpy(sakib.name, name);
+        
+        cin >> rakib.id >> name >> rakib.section >> rakib.total_marks;
+        strcpy(rakib.name, name);
+        
+        cin >> akib.id >> name >> akib.section >> akib.total_marks;
+        strcpy(akib.name, name);
 
         Student *highestMarks = &sakib;
 
